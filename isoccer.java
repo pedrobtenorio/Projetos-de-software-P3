@@ -469,6 +469,15 @@ public class isoccer{
     public static void relatorioFuncionarios()
     {
        int i;
+       if(flagPresidente==true)
+       {
+        System.out.format("medico: %s%nemail: %s%ncpf: %s%ntelefone: %s%nsalario: %.2f%n", presidenteNome, presidenteEmail, presidenteCPF, presidenteTelefone, presidenteSalario);
+   
+        System.out.println();
+        System.out.println();
+       }
+
+       
        if(flagMedico==true)
        {
         System.out.format("medico: %s%nemail: %s%ncpf: %s%ntelefone: %s%nsalario: %.2f%n", medicoNome, medicoEmail, medicoCPF, medicoTelefone, medicoSalario);
