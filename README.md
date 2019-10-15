@@ -8,5 +8,6 @@ O login e a senha estao salvos nas linhas 86 e 87
 login ="guerreiros";
 senha="12345";
 
+Os salarios são em float ok?
 
 
