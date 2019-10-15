@@ -76,7 +76,7 @@ public class isoccer{
    static int Dormitorios;
 
 
-    static Scanner input = new Scanner(System.in).useDelimiter("\n");
+    static Scanner input = new Scanner(System.in);
     
     static String lixo;
 
@@ -89,9 +89,9 @@ public class isoccer{
 
         System.out.println("Bem vindo a pagina de admnistração dos guerreiros de alagoas");
         System.out.println("Digite seu login");
-        loginDigitado=input.next();
+        loginDigitado=input.nextLine();
         System.out.println("digite sua senha");
-        senhaDigitada=input.next();
+        senhaDigitada=input.nextLine();
         limpar();
         if(senha.equals(senhaDigitada) && login.equals(loginDigitado))
         {
@@ -112,20 +112,20 @@ public class isoccer{
                             {
                                 limpar();
                                 System.out.println("Ja existe um presidente cadastrado!, digite alguma tecla para voltar!");
-                                lixo=input.next();
+                                lixo=input.nextLine();
                             }
                             else
                             {
                                 limpar();
                                 flagPresidente=true;
                                 System.out.println("insira o nome do presidente");
-                                presidenteNome=input.next();
+                                presidenteNome=input.nextLine();
                                 System.out.println("insira o email do presidente");
-                                presidenteEmail=input.next();
+                                presidenteEmail=input.nextLine();
                                 System.out.println("insira o CPF do presidente");
-                                presidenteCPF=input.next();
+                                presidenteCPF=input.nextLine();
                                 System.out.println("insira o telefone do presidente");
-                                presidenteTelefone=input.next();
+                                presidenteTelefone=input.nextLine();
                                 System.out.println("insira o salario do presidente");
                                 presidenteSalario=input.nextFloat();
                                 //System.out.format("%n%n%s%n%s%n%s%n%s%n%.2f%n", presidenteNome, presidenteEmail, presidenteCPF, presidenteTelefone, presidenteSalario);
@@ -137,20 +137,20 @@ public class isoccer{
                             {
                                 limpar();
                                 System.out.println("Ja existe um Medico cadastrado, digite alguma tecla para voltar!");
-                                lixo=input.next();
+                                lixo=input.nextLine();
                             }
                             else
                             {
                                 limpar();
                                 flagMedico=true;
                                 System.out.println("insira o nome do medico");
-                                medicoNome=input.next();
+                                medicoNome=input.nextLine();
                                 System.out.println("insira o email do medico");
-                                medicoEmail=input.next();
+                                medicoEmail=input.nextLine();
                                 System.out.println("insira o CPF do medico");
-                                medicoCPF=input.next();
+                                medicoCPF=input.nextLine();
                                 System.out.println("insira o telefone do medico");
-                                medicoTelefone=input.next();
+                                medicoTelefone=input.nextLine();
                                 System.out.println("insira o salario do medico");
                                 medicoSalario=input.nextFloat();
                             }
@@ -161,20 +161,20 @@ public class isoccer{
                             {
                                 limpar();
                                 System.out.println("Ja existe um tecnico cadastrado, digite alguma tecla para voltar!");
-                                lixo=input.next();
+                                lixo=input.nextLine();
                             }
                             else
                             {
                                 limpar();
                                 flagTecnico=true;
                                 System.out.println("insira o nome do tecnico");
-                                tecnicoNome=input.next();
+                                tecnicoNome=input.nextLine();
                                 System.out.println("insira o email do tecnico");
-                                tecnicoEmail=input.next();
+                                tecnicoEmail=input.nextLine();
                                 System.out.println("insira o CPF do tecnico");
-                                tecnicoCPF=input.next();
+                                tecnicoCPF=input.nextLine();
                                 System.out.println("insira o telefone do tecnico");
-                                tecnicoTelefone=input.next();
+                                tecnicoTelefone=input.nextLine();
                                 System.out.println("insira o salario do tecnico");
                                 tecnicoSalario=input.nextFloat();
                             }
@@ -244,6 +244,7 @@ public class isoccer{
                         {
                             System.out.println("Não a existe onibus disponivel para o time, se deseja adicionar um onibus digite (1), se nao tecle (2)");
                             opc=input.nextInt();
+                            input.nextLine();
                             if(opc==1)
                             {
                                 onibus=true;
@@ -262,6 +263,7 @@ public class isoccer{
 
                             System.out.println("Não a existe estadio disponivel para o time, se deseja adicionar um estadio digite (1), se nao tecle (2)");
                             opc=input.nextInt();
+                            input.nextLine();
                             if(opc==1)
                             {
                                 adicionarEstadio();
@@ -274,6 +276,7 @@ public class isoccer{
                             System.out.format("o Estadio %s comporta %d torcedores, tem %d banheiros e %d lanchonetes%n", estadioNome, estadioCapacidade, estadioBanheiro, estadioLanchonete);
                             System.out.println("Deseja atualizar os dados do estadio? Se sim digite (1), se não digite (2)");
                             opc=input.nextInt();
+                            input.nextLine();
                             if(opc==1)
                             {
                                 System.out.println("Insira a capacidade do estadio:");
@@ -282,6 +285,7 @@ public class isoccer{
                                 estadioLanchonete=input.nextInt();
                                 System.out.println("Insira o numero de banheiros do estadio:");
                                 estadioBanheiro=input.nextInt();
+                                input.nextLine();
                                 System.out.println("Dados atualizados com sucesso!");
                             }
                         }
@@ -292,11 +296,13 @@ public class isoccer{
                         {
                             System.out.println("Não a existe centro de treinamento disponivel para o time, se deseja adicionar um centro de treinamento digite (1), se nao tecle (2)");
                             opc=input.nextInt();
+                            input.nextLine();
                             if(opc==1)
                             {
                                 centroDeTreinamento=true;
                                 System.out.println("digite o numero de dormitorios no centro de treinamento");
                                 Dormitorios=input.nextInt();
+                                input.nextLine();
                                 System.out.println("centro de treinamento adicionado com sucesso");
                             }
                         }
@@ -306,10 +312,12 @@ public class isoccer{
                         System.out.format("O centro de treinamento tem %d dormitorios%n", Dormitorios);
                         System.out.println("Deseja atualizar os dados do centro de treinamento? Se sim digite (1), se não digite (2)");
                         opc=input.nextInt();
+                        input.nextLine();
                         if(opc==1)
                         {
                             System.out.println("digite o numero de dormitorios no centro de treinamento");
                             Dormitorios=input.nextInt(); 
+                            input.nextLine();
                             System.out.println("Dados atualizados com sucesso!");
                         }
 
@@ -376,6 +384,7 @@ public class isoccer{
             System.out.println("(5) sair");
             int opc;
             opc=input.nextInt();
+            input.nextLine();
             return opc;
     }
     public static int menu2()
@@ -392,6 +401,7 @@ public class isoccer{
             System.out.println("(9) voltar");
             int opc;
             opc=input.nextInt();
+            input.nextLine();
             return opc;
     }
 
@@ -404,6 +414,7 @@ public class isoccer{
             System.out.println("(4) Voltar");
             int opc;
             opc=input.nextInt();
+            input.nextLine();
             return opc;
     }
 
@@ -416,6 +427,7 @@ public class isoccer{
             System.out.println("(4) Voltar");
             int opc;
             opc=input.nextInt();
+            input.nextLine();
             return opc;
     }
 
@@ -431,6 +443,7 @@ public class isoccer{
 
             int opc;
             opc=input.nextInt();
+            input.nextLine();
             return opc;
     }
 
@@ -469,15 +482,15 @@ public class isoccer{
     public static void relatorioFuncionarios()
     {
        int i;
+
        if(flagPresidente==true)
        {
-        System.out.format("medico: %s%nemail: %s%ncpf: %s%ntelefone: %s%nsalario: %.2f%n", presidenteNome, presidenteEmail, presidenteCPF, presidenteTelefone, presidenteSalario);
+        System.out.format("presidente: %s%nemail: %s%ncpf: %s%ntelefone: %s%nsalario: %.2f%n", presidenteNome, presidenteEmail, presidenteCPF, presidenteTelefone, presidenteSalario);
    
         System.out.println();
         System.out.println();
        }
 
-       
        if(flagMedico==true)
        {
         System.out.format("medico: %s%nemail: %s%ncpf: %s%ntelefone: %s%nsalario: %.2f%n", medicoNome, medicoEmail, medicoCPF, medicoTelefone, medicoSalario);
@@ -572,7 +585,7 @@ public class isoccer{
         {
             if(socio[i]==1)
             {
-                System.out.format("socio: %s%nemail: %s%ncpf: %s%n telefone: %s%ncontribuião: %.2f%nnivel:%s%n", socioNome[i],socioEmail[i], socioValor[i], socioStatus[i]);
+                System.out.format("socio: %s%nemail: %s%ncpf: %s%n telefone: %s%ncontribuião: %.2f%nnivel:%s%n", socioNome[i],socioEmail[i], socioCPF[i],socioTelefone[i] ,  socioValor[i], socioStatus[i]);
                 if(socioAdplencia[i]==true)
                 {
                     System.out.println("socio adiplente");
@@ -603,17 +616,17 @@ public class isoccer{
         if(i>=4)
         {
             System.out.println("Voce ja tem preparadores demais, tecle qualquer letra para voltar.");
-            lixo=input.next();
+            lixo=input.nextLine();
             return;
         }
         System.out.println("insira o nome do preparador");
-        preparadorNome[i]=input.next();
+        preparadorNome[i]=input.nextLine();
         System.out.println("insira o email do preparador");
-        preparadorEmail[i]=input.next();
+        preparadorEmail[i]=input.nextLine();
         System.out.println("insira o CPF do preparador");
-        preparadorCPF[i]=input.next();
+        preparadorCPF[i]=input.nextLine();
         System.out.println("insira o telefone do preparador");
-        preparadorTelefone[i]=input.next();
+        preparadorTelefone[i]=input.nextLine();
         System.out.println("insira o salario do preparador");
         preparadorSalario[i]=input.nextFloat();
 
@@ -635,17 +648,17 @@ public class isoccer{
         if(i>=4)
         {
             System.out.println("Voce ja tem motoristas demais, tecle qualquer letra para voltar.");
-            lixo=input.next();
+            lixo=input.nextLine();
             return;
         }
         System.out.println("insira o nome do motorista");
-        motoristaNome[i]=input.next();
+        motoristaNome[i]=input.nextLine();
         System.out.println("insira o email do motorista");
-        motoristaEmail[i]=input.next();
+        motoristaEmail[i]=input.nextLine();
         System.out.println("insira o CPF do motorista");
-        motoristaCPF[i]=input.next();
+        motoristaCPF[i]=input.nextLine();
         System.out.println("insira o telefone do motorista");
-        motoristaTelefone[i]=input.next();
+        motoristaTelefone[i]=input.nextLine();
         System.out.println("insira o salario do motorista");
         motoristaSalario[i]=input.nextFloat();
         return;
@@ -665,17 +678,17 @@ public class isoccer{
         if(i>=4)
         {
             System.out.println("Voce ja tem cozinheiros demais, tecle qualquer letra para voltar.");
-            lixo=input.next();
+            lixo=input.nextLine();
             return;
         }
         System.out.println("insira o nome do cozinheiro");
-        cozinheiroNome[i]=input.next();
+        cozinheiroNome[i]=input.nextLine();
         System.out.println("insira o email do cozinheiro");
-        cozinheiroEmail[i]=input.next();
+        cozinheiroEmail[i]=input.nextLine();
         System.out.println("insira o CPF do cozinheiro");
-        cozinheiroCPF[i]=input.next();
+        cozinheiroCPF[i]=input.nextLine();
         System.out.println("insira o telefone do cozinheiro");
-        cozinheiroTelefone[i]=input.next();
+        cozinheiroTelefone[i]=input.nextLine();
         System.out.println("insira o salario do cozinheiro");
         cozinheiroSalario[i]=input.nextFloat();
 
@@ -695,17 +708,17 @@ public class isoccer{
         if(i>=4)
         {
             System.out.println("Voce ja tem advogados demais, tecle qualquer letra para voltar.");
-            lixo=input.next();
+            lixo=input.nextLine();
             return;
         }
         System.out.println("insira o nome do advogado");
-        advogadoNome[i]=input.next();
+        advogadoNome[i]=input.nextLine();
         System.out.println("insira o email do advogado");
-        advogadoEmail[i]=input.next();
+        advogadoEmail[i]=input.nextLine();
         System.out.println("insira o CPF do advogado");
-        advogadoCPF[i]=input.next();
+        advogadoCPF[i]=input.nextLine();
         System.out.println("insira o telefone do advogado");
-        advogadoTelefone[i]=input.next();
+        advogadoTelefone[i]=input.nextLine();
         System.out.println("insira o salario do advogado");
         advogadoSalario[i]=input.nextFloat();
         return;
@@ -728,23 +741,25 @@ public class isoccer{
         if(i>=22)
         {
             System.out.println("Voce ja tem jogadores demais, tecle qualquer letra para voltar.");
-            lixo=input.next();
+            lixo=input.nextLine();
             return;
         }
         System.out.println("insira o nome do jogador");
-        jogadorNome[i]=input.next();
+        jogadorNome[i]=input.nextLine();
         System.out.println("insira o email do jogador");
-        jogadorEmail[i]=input.next();
+        jogadorEmail[i]=input.nextLine();
         System.out.println("insira o CPF do jogador");
-        jogadorCPF[i]=input.next();
+        jogadorCPF[i]=input.nextLine();
         System.out.println("insira o telefone do jogador");
-        jogadorTelefone[i]=input.next();
+        jogadorTelefone[i]=input.nextLine();
         System.out.println("insira o salario do jogador");
         jogadorSalario[i]=input.nextFloat();
+        input.nextLine();
         System.out.println("insira a posição do jogador (volante, zagueiro, meia, goleiro, atacante, lateral esquerdo, lateral direito)");
-        jogadoresPosicao[i]=input.next();
+        jogadoresPosicao[i]=input.nextLine();
         System.out.println("se o jogador estiver apto para jogar digite 1, se não, digite 0");
         aux=input.nextInt();
+        input.nextLine();
         if(aux==1)
         {
             apto[i]=true;
@@ -770,19 +785,19 @@ public class isoccer{
         if(i>=90)
         {
             System.out.println("Voce ja tem Socios demais, tecle qualquer letra para voltar.");
-            lixo=input.next();
+            lixo=input.nextLine();
             return;
         }
         System.out.println("insira o nome do socio");
-        socioNome[i]=input.next();
+        socioNome[i]=input.nextLine();
         System.out.println("insira o email do socio");
-        socioEmail[i]=input.next();
+        socioEmail[i]=input.nextLine();
         System.out.println("insira o CPF do socio");
-        socioCPF[i]=input.next();
+        socioCPF[i]=input.nextLine();
         System.out.println("insira o telefone do socio");
-        socioTelefone[i]=input.next();
+        socioTelefone[i]=input.nextLine();
         System.out.println("insira o endereço do socio");
-        socioEndereco[i]=input.next();
+        socioEndereco[i]=input.nextLine();
         System.out.println("insira o valor de contribuiçao do socio");
         socioValor[i]=input.nextFloat();
         if(socioValor[i]>=valorElite)
@@ -803,6 +818,7 @@ public class isoccer{
         }
         System.out.println("se o socio estiver adplente digite 1, se não, digite 0");
         aux=input.nextInt();
+        input.nextLine();
         if(aux==1)
         {
             socioAdplencia[i]=true;
@@ -851,7 +867,7 @@ public class isoccer{
     {
         String cpfProcurado;
         System.out.println("digite o cpf do socio que voce deseja mudar o status de adplencia");
-        cpfProcurado=input.next();
+        cpfProcurado=input.nextLine();
         int i;
         int flag=1;
         for(i=0; i<=90; i++)
@@ -883,13 +899,14 @@ public class isoccer{
     {
         estadio=true;
         System.out.println("Escolha um nome para o estadio:");
-        estadioNome=input.next();
+        estadioNome=input.nextLine();
         System.out.println("Insira a capacidade do estadio:");
         estadioCapacidade=input.nextInt();
         System.out.println("Insira o numero de lanchonetes do estadio:");
         estadioLanchonete=input.nextInt();
         System.out.println("Insira o numero de banheiros do estadio:");
         estadioBanheiro=input.nextInt();
+        input.nextLine();
 
     }
 
